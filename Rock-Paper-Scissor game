@@ -1,0 +1,24 @@
+import random
+c_move,u_move=("","")
+draw,win,lose,total_move=(0,0,0,0)
+
+while True:
+    u_move=input("Enter r for Rock, p for Paper, s for Sicssor, q for quit: ").lower().strip()
+    if u_move not in ['r','p','s','q']:
+        continue
+    elif u_move=='q':
+        break
+    else:
+        total_move+=1
+        c_move=random.choice(['r','p','s','q'])
+        print(f"Computer move->{c_move} your move->{u_move}")
+        if c_move=u_move:
+            print("Draw...")
+            draw+=1
+        elif (u_move=='p' and c_move=='r') or (u_move=='s' and c_move=='p') or (u_move=='r' and c_move=='r'):
+            print("You Win...")
+            win+=1
+        else:
+            print("You Lost...")
+            lose+=1
+print(f"you have {win} wins, {lose} loses, {draw} draw->{total_move} total moves\n")
