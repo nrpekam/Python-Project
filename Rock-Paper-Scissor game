@@ -15,7 +15,7 @@ while True:
         if c_move=u_move:
             print("Draw...")
             draw+=1
-        elif (u_move=='p' and c_move=='r') or (u_move=='s' and c_move=='p') or (u_move=='r' and c_move=='r'):
+        elif (u_move=='p' and c_move=='r') or (u_move=='s' and c_move=='p') or (u_move=='p' and c_move=='r'):
             print("You Win...")
             win+=1
         else:
